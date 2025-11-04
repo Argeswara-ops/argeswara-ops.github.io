@@ -42,9 +42,19 @@
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 bg-grid-cyber bg-[size:40px_40px] opacity-40 animate-pulse"></div>
 
   <!-- Navbar -->
-  <header class="sticky top-0 z-40 backdrop-blur bg-slate-950/80 border-b border-white/10">
+  <header class="sticky top-0 z-50 backdrop-blur bg-slate-950/80 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
       <h1 class="font-display text-lg tracking-widest text-neon">ARGES<span class="text-brand">.DEV</span></h1>
+      
+      <!-- Burger -->
+      <button id="menu-btn" class="md:hidden text-neon focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex gap-6 text-sm">
         <a href="#about" class="hover:text-neon">About</a>
         <a href="#skills" class="hover:text-neon">Skills</a>
@@ -53,6 +63,15 @@
         <a href="#contact" class="hover:text-neon">Contact</a>
       </nav>
     </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="hidden md:hidden flex flex-col bg-slate-900/95 border-t border-white/10 text-center py-4 space-y-3">
+      <a href="#about" class="hover:text-neon">About</a>
+      <a href="#skills" class="hover:text-neon">Skills</a>
+      <a href="#projects" class="hover:text-neon">Projects</a>
+      <a href="#experience" class="hover:text-neon">Experience</a>
+      <a href="#contact" class="hover:text-neon">Contact</a>
+    </nav>
   </header>
 
   <!-- Hero -->
@@ -83,18 +102,10 @@
       <div class="text-slate-300 leading-relaxed">
         <p>I’m a passionate Full-Stack Developer specializing in high-performance applications using React, Next.js, Laravel, and Node.js. My mission is to combine futuristic design and scalable backend architectures for seamless digital experiences.</p>
         <div class="mt-8 grid sm:grid-cols-2 gap-4 text-sm">
-          <div class="neon-border glass p-4 rounded-xl text-center">
-            <p class="text-neon font-semibold text-lg">5+</p><p class="text-slate-400">Years Experience</p>
-          </div>
-          <div class="neon-border glass p-4 rounded-xl text-center">
-            <p class="text-neon font-semibold text-lg">30+</p><p class="text-slate-400">Completed Projects</p>
-          </div>
-          <div class="neon-border glass p-4 rounded-xl text-center">
-            <p class="text-neon font-semibold text-lg">Full Stack</p><p class="text-slate-400">Web & Mobile</p>
-          </div>
-          <div class="neon-border glass p-4 rounded-xl text-center">
-            <p class="text-neon font-semibold text-lg">Sidoarjo, ID</p><p class="text-slate-400">Location</p>
-          </div>
+          <div class="neon-border glass p-4 rounded-xl text-center"><p class="text-neon font-semibold text-lg">5+</p><p class="text-slate-400">Years Experience</p></div>
+          <div class="neon-border glass p-4 rounded-xl text-center"><p class="text-neon font-semibold text-lg">30+</p><p class="text-slate-400">Completed Projects</p></div>
+          <div class="neon-border glass p-4 rounded-xl text-center"><p class="text-neon font-semibold text-lg">Full Stack</p><p class="text-slate-400">Web & Mobile</p></div>
+          <div class="neon-border glass p-4 rounded-xl text-center"><p class="text-neon font-semibold text-lg">Sidoarjo, ID</p><p class="text-slate-400">Location</p></div>
         </div>
       </div>
     </div>
@@ -117,51 +128,45 @@
   <section id="projects" class="py-16 max-w-7xl mx-auto px-6">
     <h2 class="font-display text-3xl mb-8">Highlighted Projects</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div onclick="window.open('https://dribbble.com/shots/20459757-Neon-Dashboard','_blank')" class="neon-border glass rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer">
+      <div class="neon-border glass rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer" onclick="window.open('https://dribbble.com/shots/20459757-Neon-Dashboard','_blank')">
         <img src="https://i.pinimg.com/1200x/c4/67/7b/c4677bc2145151286e5d4c0767d2c5d9.jpg" class="w-full h-52 object-cover">
-        <div class="p-5"><h3 class="font-display text-xl">Cyber Dashboard</h3><p class="text-slate-300 mt-2 text-sm">A futuristic real-time analytics dashboard designed with neon visual data flow.</p></div>
+        <div class="p-5"><h3 class="font-display text-xl">Cyber Dashboard</h3><p class="text-slate-300 mt-2 text-sm">A futuristic real-time analytics dashboard with neon visual data flow.</p></div>
       </div>
-      <div onclick="window.open('https://dribbble.com/shots/21368093-Futuristic-Ecommerce-UI','_blank')" class="neon-border glass rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer">
+      <div class="neon-border glass rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer" onclick="window.open('https://dribbble.com/shots/21368093-Futuristic-Ecommerce-UI','_blank')">
         <img src="https://i.pinimg.com/1200x/5b/1c/12/5b1c12f7c76e152e0dad7e036c53135f.jpg" class="w-full h-52 object-cover">
-        <div class="p-5"><h3 class="font-display text-xl">AI Commerce Platform</h3><p class="text-slate-300 mt-2 text-sm">An AI-driven e-commerce system with adaptive product recommendations and sleek futuristic UI.</p></div>
+        <div class="p-5"><h3 class="font-display text-xl">AI Commerce Platform</h3><p class="text-slate-300 mt-2 text-sm">AI-driven e-commerce system with adaptive product recommendations.</p></div>
       </div>
-      <div onclick="window.open('https://dribbble.com/shots/17829007-Metaverse-Web-App','_blank')" class="neon-border glass rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer">
+      <div class="neon-border glass rounded-2xl overflow-hidden hover:scale-[1.03] transition-transform duration-300 cursor-pointer" onclick="window.open('https://dribbble.com/shots/17829007-Metaverse-Web-App','_blank')">
         <img src="https://i.pinimg.com/1200x/f4/28/42/f4284223cfd365838358fc8cc0f5e722.jpg" class="w-full h-52 object-cover">
-        <div class="p-5"><h3 class="font-display text-xl">Metaverse Hub</h3><p class="text-slate-300 mt-2 text-sm">An interactive 3D metaverse prototype visualizing virtual environments and blockchain connections.</p></div>
+        <div class="p-5"><h3 class="font-display text-xl">Metaverse Hub</h3><p class="text-slate-300 mt-2 text-sm">3D metaverse prototype visualizing virtual environments.</p></div>
       </div>
     </div>
   </section>
 
-<!-- Experience -->
-<section id="experience" class="py-16 max-w-7xl mx-auto px-6">
-  <h2 class="font-display text-3xl mb-8">Professional Experience</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-
-    <!-- Web Developer -->
-    <div class="neon-border glass p-6 rounded-2xl">
-      <h3 class="font-semibold text-xl">Web Developer - Institut Agama Islam Hasan Jufri</h3>
-      <p class="text-sm text-slate-400">Aug 2024 — Present | Remote</p>
-      <ul class="mt-4 text-slate-300 space-y-2 list-disc list-inside">
-        <li>Developed academic web system using <span class="text-cyan-400">Laravel</span> & <span class="text-cyan-400">MySQL</span>.</li>
-        <li>Integrated RESTful API for student and attendance modules.</li>
-        <li>Optimized deployment with <span class="text-cyan-400">Docker</span> & <span class="text-cyan-400">Nginx</span>.</li>
-      </ul>
+  <!-- Experience -->
+  <section id="experience" class="py-16 max-w-7xl mx-auto px-6">
+    <h2 class="font-display text-3xl mb-8">Professional Experience</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="neon-border glass p-6 rounded-2xl">
+        <h3 class="font-semibold text-xl">Web Developer — Institut Agama Islam Hasan Jufri</h3>
+        <p class="text-sm text-slate-400">Aug 2024 — Present | Remote</p>
+        <ul class="mt-4 text-slate-300 space-y-2 list-disc list-inside">
+          <li>Developed academic web system using <span class="text-cyan-400">Laravel</span> & <span class="text-cyan-400">MySQL</span>.</li>
+          <li>Integrated RESTful API for student and attendance modules.</li>
+          <li>Optimized deployment with <span class="text-cyan-400">Docker</span> & <span class="text-cyan-400">Nginx</span>.</li>
+        </ul>
+      </div>
+      <div class="neon-border glass p-6 rounded-2xl">
+        <h3 class="font-semibold text-xl">Android Developer — Institut Agama Islam Hasan Jufri</h3>
+        <p class="text-sm text-slate-400">Jun 2023 — Aug 2024 | Remote</p>
+        <ul class="mt-4 text-slate-300 space-y-2 list-disc list-inside">
+          <li>Built Android app integrated with <span class="text-cyan-400">Laravel API</span> using <span class="text-cyan-400">Retrofit</span>.</li>
+          <li>Designed modern UI with <span class="text-cyan-400">Jetpack Compose</span> and MVVM pattern.</li>
+          <li>Collaborated with backend & design teams for seamless UX.</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Android Developer -->
-    <div class="neon-border glass p-6 rounded-2xl">
-      <h3 class="font-semibold text-xl">Android Developer - Institut Agama Islam Hasan Jufri</h3>
-      <p class="text-sm text-slate-400">Jun 2023 — Aug 2024 | Remote</p>
-      <ul class="mt-4 text-slate-300 space-y-2 list-disc list-inside">
-        <li>Built Android app integrated with <span class="text-cyan-400">Laravel API</span> using <span class="text-cyan-400">Retrofit</span>.</li>
-        <li>Designed modern UI with <span class="text-cyan-400">Jetpack Compose</span> and MVVM pattern.</li>
-        <li>Collaborated with backend & design teams for seamless UX.</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- CTA -->
   <section id="cta" class="py-20 max-w-7xl mx-auto px-6">
@@ -207,12 +212,23 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="py-10 text-center text-sm text-slate-400 border-t border-white/10">
     © <span id="year"></span> Arges. Designed with ⚡ Tailwind Futurism.
   </footer>
 
   <script>
+    // Dynamic Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Burger Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.classList.toggle('text-brand'); // efek warna pas diklik
+    });
   </script>
 </body>
 </html>
